@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>CM3203</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="title-bar"> 
+            <button id="settings-button" onclick="window.location.href='settings.html'">
+                <i class="fas fa-cog"></i>
+            </button>
+        </div>
+        
+        <!-- Display inputs -->
+        <div id="emotion-display" class="emotion-display">
+            <button id="backspace-button">
+                <i class="fas fa-backspace"></i>
+            </button>
+            <button id="clear-button">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- emotion section -->
+        <div class="content">
+                <div class="button" onclick="displayEmotion('/img/illustrations/iii.png', 'I am feeling')">
+                    <img src="img/illustrations/iii.png" alt="I am feeling">
+                    <span> I am feeling </span>
+                </div>
+                <div class="button" onclick="displayEmotion('/img/illustrations/i_.png', 'He is feeling')">
+                    <img src="img/illustrations/i_.png" alt="He is feeling">
+                    <span> He is feeling </span>
+                </div>
+                <div class="button" onclick="displayEmotion('/img/illustrations/_i.png', 'She is feeling')">
+                    <img src="img/illustrations/_i.png" alt="She is feeling">
+                    <span> She is feeling </span>
+                </div>
+                
+                
+                <!-- happy excited -->
+                <div class="button happy-button" onclick="displayEmotion('/img/illustrations/happy.png', 'happy')">
+                    <img src="img/illustrations/happy.png" alt="happy">
+                    <span> happy </span>
+                </div>
+
+                <div class="button excited-button" onclick="displayEmotion('/img/illustrations/excited.png', 'excited')">
+                    <img src="img/illustrations/excited.png" alt="excited">
+                    <span> excited </span>
+                </div>
+            
+                        
+                <!-- scared -->
+                <div class="button scared-button" onclick="displayEmotion('/img/illustrations/scared.png', 'scared')">
+                    <img src="img/illustrations/scared.png" alt="scared">
+                    <span> scared </span>
+                </div>
+            
+            
+                <!-- sad -->
+                <div class="button sad-button" onclick="displayEmotion('/img/illustrations/sad.png', 'sad')">
+                    <img src="img/illustrations/sad.png" alt="sad">
+                    <span> sad </span>
+                </div>
+                
+                
+                <!-- angry surprised -->
+                <div class="button angry-button" onclick="displayEmotion('/img/illustrations/angry.png', 'angry')">
+                    <img src="img/illustrations/angry.png" alt="angry">
+                    <span> angry </span>
+                </div>
+                
+                <div class="button surprised-button" onclick="displayEmotion('/img/illustrations/surprised.png', 'surprised')">
+                    <img src="img/illustrations/surprised.png" alt="surprised">
+                    <span> suprised </span>
+                </div>
+            
+            </div>
+        </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

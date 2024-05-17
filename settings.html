@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>settings</title>
+</head>
+<body>
+    <div class="app-container">
+        <button id="backButton" class="back-button" onclick="window.history.back()"><i class="fa fa-arrow-left" aria-hidden="true"> Back </i></button>
+        <div class="title-bar"> Settings </div>
+        <h1> Display </h1>
+        <p> Pick Your Cards!</p>
+        <div class="content-settings">
+            <select id="imageSetSelect">
+                <option value="Girl"> Girl Cartoon </option>
+                <option value="Boy"> Boy Cartoon </option>
+                <option value="Illustrations"> Illustrations </option>
+            </select>
+            <button onclick="saveImageSet()"> Save  </button>
+        </div>
+        <hr>
+        <div class="images-wrapper">
+            <div class="image-container">
+                <img src="img/girl/happy.png" alt="girl">
+                <p> girl cartoon </p>
+            </div>
+            <div class="image-container">
+                <img src="img/boy/happy.png" alt="boy">
+                <p> boy cartoon </p>
+            </div>
+            <div class="image-container">
+                <img src="img/illustrations/happy.png" alt="illustrations">
+                <p> illustrations </p>
+            </div>
+        </div>
+        <hr>
+    </div> 
+
+    <script>
+        function saveImageSet() {
+            const selectedSet = document.getElementById('imageSetSelect').value;
+            localStorage.setItem('imageSet', selectedSet);
+            alert('Image set saved! Please go back to the main page.');
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

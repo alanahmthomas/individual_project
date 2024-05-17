@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', 'Comic Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ececec;
+    overflow: hidden;
+}
+
+.app-container {
+    width: 90%;
+    height: 90%;
+    background: #ffffffe1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-bar {
+    background: #69b26b;
+    color: #ffffffe1;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5em;
+    position: relative;
+}
+
+#settings-button {
+    position: center;
+    right: 10px;
+    background-color: #ffffffe1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+#settings-button:hover {
+    background-color: #555;
+    color: #ffffffe1;
+}
+
+.fas.fa-cog {
+    font-size: 1.5rem;
+}
+
+#emotion-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    background: #ffffffb4;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 24px;
+    gap: 10px;
+    margin: 10px;
+    position: relative;
+    height: 150px;
+}
+
+.emotion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.emotion-item img {
+    width: 8rem;
+    height: 7rem;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.emotion-item span {
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+#backspace-button {
+    position: absolute;
+    right: 60px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    cursor: pointer;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    height: calc(100% - 20px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#backspace-button:hover, #clear-button:hover {
+    color: #d32f2f;
+}
+
+#clear-button {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    cursor: pointer;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    height: calc(100% - 20px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fas.fa-backspace, .fas.fa-times {
+    font-size: 3rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* responsive grid */
+    gap: 2rem;
+    padding: 2rem; 
+    flex: 1;
+    align-items: start;
+    justify-items: center;
+    overflow: hidden;
+}
+
+.button, .back-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffffe1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+    width: 9rem;
+    height: 9rem;
+    margin: 5px;
+}
+
+.button:hover, .back-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.button img {
+    width: 7rem;
+    height: 7rem;
+}
+
+.button span {
+    margin-top: 0.25rem;
+    font-size: 1.4rem;
+}
+
+.happy-button, .excited-button {
+    background-color: #fbf8cc;
+}
+
+.scared-button {
+    background-color: #ffdab9;
+}
+
+.sad-button {
+    background-color: #ebd9fc;
+}
+
+.angry-button, .surprised-button {
+    background-color: #ffe6e8;
+}
+
+
+/* settings */ 
+
+h1 {
+    color: #333;
+    margin: 20px 15px;
+    padding: 1rem;
+}
+
+p {
+    color: #333;
+    margin: 20px 15px;
+}
+
+.images-wrapper {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    margin: 2rem 2rem;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 15rem; /* fixed size for the images */
+    height: 15rem;
+}
+
+.image-container p {
+    margin-top: 1rem; /* spacing between image and text */
+}
